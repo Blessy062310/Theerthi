@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(225, 73, 73, 1),rgba(93, 36, 141, 1));
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 12vh;
+  background: #ff4949;
+  box-shadow: 2px 2px 15px rgb(43, 3, 75);
+  position: relative;
+}
+
+nav {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul.nav-links {
+  list-style: none;
+  display: flex;
+}
+ul.nav-links li{
+    width: 120px;
+}
+ul.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+ul.nav-links li a.active::after{
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  border-radius: 15px;
+  position: absolute;
+  bottom: -40px;
+  left: -5px;
+}
+
+/*target the links and add the pseduo class to each one of it*/
+ul.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -5px;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  border-radius: 15px;
+  transition: all .2s linear;
+}
+ul.nav-links li a:hover::after {
+  width: 110%; 
+}
+#btn{
+    width: 150px;
+    padding:  14px;
+    outline: none;
+    border: none;
+    background: #fff;
+}
+#btn .fas{
+     margin-right: 15px;
+}
+#btn a{
+    text-decoration: none;
+    color:#ff4949;
+    font-size: 0.9rem;
+}
+/*Header ends here */
+.content-wrapper{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content-desc{
+    width: 500px;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    top: 50px;
+}
+.content-desc h1{
+    font-weight: 500;
+    font-size: 2rem;
+}
+h1 span{
+    color: #ffb904;
+}
+.content-desc p{
+    font-size: 1.2rem;
+    width: 500px;
+    margin-top: 20px;
+    line-height: 2rem;
+}
+#btn-2{
+    width: 150px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    background: #fff;
+    margin-top: 25px;
+    border-radius: 8px;
+    transition: all .2s linear;
+    display: flex;
+    align-items: center;
+}
+#btn-2 .fas{
+    font-size: 1.2rem;
+    color: #ff4949;
+    margin-left: 15px;
+}
+#btn-2:hover{
+    justify-content: space-between;
+    width: 165px;
+    background: #d3d3d3;
+}
+#btn-2 a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #ff4949;
+}
+.launch{
+    width:100px;
+    height: 100px;
+    background:#fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.launch .fas{
+     font-size: 4.5rem;
+     background: linear-gradient(#FF4949, #5D248D);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     animation: rocket .5s ease-in-out infinite;
+}
+@keyframes rocket {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px) ;
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+.hero-image{
+    width:495px;
+    height:300px;
+    background: url(https://th.bing.com/th/id/R.f0d4865b7b8fb928f0ec4bc5e3239476?rik=PT50Ee8N%2bzAdYg&riu=http%3a%2f%2fstatic1.squarespace.com%2fstatic%2f5fe4caeadae61a2f19719512%2ft%2f677e89e07062a92b2da1ea52%2f1736346083646%2f2.jpg%3fformat%3d1500w&ehk=RNl5Scy4uEPccf22nMZOg1PMV8qCV1iYm48k28F8Hx8%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-position: cover;
+    border-radius: 15px;
+    opacity: 0.5;
+    margin-top: 30px;
+}
+.content-wrapper::before{
+    content:'';
+    width: 170px;
+    height: 100px;
+    background: url(https://preview.redd.it/aewgzghlaiq71.png?width=1905&format=png&auto=webp&s=7ecaa8aab759ed645f64fe1a6328fece5a801708);
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:10px;
+    left: -60px;
+    opacity: 0.5;
+    animation: circle 10s ease-in-out infinite;
+}
+@keyframes circle {
+    50%{
+        transform: rotate(-360deg);
+        top: 400px;
+    }
+    100%{
+        transform: rotate(360deg);
+        top: -50px;
+    }
+
+}
+.content-wrapper::after{
+    content:'';
+    width: 120px;
+    height: 140px;
+    background: url(../download\ \(2\).png);
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:10px;
+    right: -60px;
+    opacity: 0.5;
+}
+/*section 2 starts right here shortly */
+.section-2{
+    width: 90%;
+    margin: 50px auto 0;
+    display: flex;
+    color:#ffb904;
+}
+.cast-wrapper{
+    margin-top: 30px;
+    width: 500px;
+}
+.cast{
+    display: flex;
+}
+.cast-img{
+    width: 50px;
+    height: 50px;
+    background: url(https://www.allkpop.com/upload/2021/10/content/080758/web_data/allkpop_1633695279_20211008-squidgame.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.img-2{
+    background: url(https://images.summitmedia-digital.com/cosmo/images/2021/10/02/lee-jung-jae-1-1633107150.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: -10px;
+}
+.img-3{
+    background: url(https://assets.pikiran-rakyat.com/crop/26x0:1188x917/703x0/webp/photo/2024/02/02/1217561601.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: -20px;
+}
+.img-4{
+    background: url(https://imgmedia.larepublica.pe/640x640/larepublica/migration/images/HXR7KEIF45EDNDHFZVPHUFNAQY.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: -30px;
+}
+.img-5{
+    background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https:%2F%2Fblog.kakaocdn.net%2Fdn%2FdDaWFp%2FbtsLE3QehnB%2FXYcK3MTCj975F8J6uGyfYk%2Fimg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: -40px;
+}
+#number{
+    width: 20px;
+    position: relative;
+    left: -35px;
+    font-size: 0.875rem;
+    color: #fff;
+}
+.social-icons .fab{
+    font-size: 1.2rem;
+    color: #fff;
+    position: relative;
+    top: 25px;
+    margin-right: 25px;
+}
+.squid-game{
+    width: 500px;
+    height: 250px;
+    background: url(https://logos-world.net/wp-content/uploads/2023/04/Squid-Game-Logo.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: -80px;
+    left: -170px;
+    opacity: 0.4;
+}
+footer{
+    display: flex;
+}
+footer span{
+    margin-top: 30px;
+}
+footer{
+    margin-top: 25px;
+}
+.mask{
+    width: 70px;
+    height: 70px;
+    background: url(../download.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: 15px;
+}
+.hero-image-2{
+    width: 400px;
+    height: 500px;
+    background: url(../download\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    right: 150px;
+}
+.hero-image-2::before{
+    content:'';
+    width: 200px;
+    height: 200px;
+    background: url(../download\ \(3\).png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 230px;
+    right: -130px;
+    opacity: 0.5;
+    animation: cubes 10s ease-in-out infinite ;
+    transition: .5s linear;
+}
+@keyframes cubes {
+    0%{
+        transform: scale(0.5);
+        transition: 5s;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.hero-image-2::after{
+    content: '';
+    width: 300px;
+    height: 300px;
+    background: url(../download\ \(6\).png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 90px;
+    right: -120px;
+    opacity: 0.5;
+}
